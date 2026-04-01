@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Inter:wght@400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 220 20% 10%;
+    --foreground: 40 20% 90%;
+
+    --card: 220 18% 14%;
+    --card-foreground: 40 20% 90%;
+
+    --popover: 220 18% 14%;
+    --popover-foreground: 40 20% 90%;
+
+    --primary: 43 80% 55%;
+    --primary-foreground: 220 20% 10%;
+
+    --secondary: 220 15% 20%;
+    --secondary-foreground: 40 20% 85%;
+
+    --muted: 220 12% 18%;
+    --muted-foreground: 220 10% 55%;
+
+    --accent: 43 60% 45%;
+    --accent-foreground: 220 20% 10%;
+
+    --destructive: 0 70% 50%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 15% 22%;
+    --input: 220 15% 22%;
+    --ring: 43 80% 55%;
+
+    --radius: 0.5rem;
+
+    --player-blue: 210 80% 55%;
+    --player-blue-foreground: 0 0% 100%;
+    --player-red: 0 70% 50%;
+    --player-red-foreground: 0 0% 100%;
+    --crown-gold: 43 90% 55%;
+    --crown-gold-glow: 43 90% 65%;
+    --tile-dark: 220 18% 12%;
+    --tile-light: 220 15% 16%;
+    --tile-highlight: 43 80% 55%;
+    --tile-move: 200 70% 40%;
+    --tile-attack: 0 70% 40%;
+    --tile-fort: 140 40% 35%;
+
+    --font-display: 'Cinzel', serif;
+    --font-body: 'Inter', sans-serif;
+
+    --sidebar-background: 220 18% 14%;
+    --sidebar-foreground: 40 20% 90%;
+    --sidebar-primary: 43 80% 55%;
+    --sidebar-primary-foreground: 220 20% 10%;
+    --sidebar-accent: 220 15% 20%;
+    --sidebar-accent-foreground: 40 20% 85%;
+    --sidebar-border: 220 15% 22%;
+    --sidebar-ring: 43 80% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-body);
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+  }
+}
+
+@layer utilities {
+  .text-glow-gold {
+    text-shadow: 0 0 20px hsl(var(--crown-gold) / 0.5), 0 0 40px hsl(var(--crown-gold) / 0.3);
+  }
+  .box-glow-gold {
+    box-shadow: 0 0 15px hsl(var(--crown-gold) / 0.3), 0 0 30px hsl(var(--crown-gold) / 0.15);
+  }
+  .box-glow-blue {
+    box-shadow: 0 0 10px hsl(var(--player-blue) / 0.4);
+  }
+  .box-glow-red {
+    box-shadow: 0 0 10px hsl(var(--player-red) / 0.4);
+  }
+}
